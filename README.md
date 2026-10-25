@@ -4,9 +4,9 @@ Unofficial community firmware based on the original Pioneer EU130 1.06 update.
 Restores Bluetooth song information on a tested AVIC-X850BT while the Android
 phone remains set to AVRCP 1.6, with larger music text and a charcoal/red theme.
 
-![Background artwork](assets/background-preview.png)
+![Pioneer AVIC-X850BT Bluetooth Audio screen](assets/bluetooth-audio-preview.png)
 
-*Background asset only; the stereo draws its own text, buttons and icons over it.*
+*Illustrative product photo based on the working Bluetooth Audio screen.*
 
 ## Features
 
