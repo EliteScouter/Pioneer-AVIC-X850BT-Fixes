@@ -1,0 +1,42 @@
+{
+  "release": "1.07ES",
+  "numeric_update_version": "0x01070000",
+  "hardware_tested_this_exact_release": false,
+  "feature_baseline": "User confirmed Bluetooth metadata, enlarged text and artifact-free palette on private 1.12",
+  "popup": "English caption Version %s -> Ver 1.07ES; runtime version data unchanged; hardware confirmation pending",
+  "background": "charcoal/red, no STi logo; all channel values >= 8",
+  "RGB555_transparent_black_pixels": 0,
+  "resource_compression": {
+    "layoutCreators.dat": {
+      "changed_semantic_pages": [
+        0,
+        9,
+        122,
+        123,
+        124,
+        125
+      ],
+      "old_bytes": 149265,
+      "new_bytes": 149265,
+      "round_trip": "PASS"
+    },
+    "initDB.dat": {
+      "changed_semantic_pages": [
+        464
+      ],
+      "old_bytes": 699208,
+      "new_bytes": 699208,
+      "round_trip": "PASS"
+    }
+  },
+  "allowed_PRG_range_audit": "PASS",
+  "changed_files": [
+    "EU130APL.VER",
+    "EU130PLT.VER",
+    "PLATFORM/EU130PLT.PRG",
+    "APL/Resource/Mame/image.iarc"
+  ],
+  "original_PRG_sha256": "49c559947b8a7384bea23223ef0a702b17b48c7b3faee34e1be8a48e5cec8571",
+  "PRG_sha256": "8e24d95a7c1c690c0c25cec32602d51487ffb53d952347d944aed78c426aab9d",
+  "image_iarc_sha256": "17a02eb7789f885096c76df59f163a91fb092ccc93c6619566303c1b4ad45b5f"
+}
