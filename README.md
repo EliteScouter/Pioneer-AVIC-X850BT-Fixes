@@ -1,4 +1,4 @@
-# Pioneer AVIC-X850BT — Bluetooth metadata fix · 1.07ES
+# Pioneer AVIC-X850BT - Bluetooth metadata fix · 1.07ES
 
 Unofficial community firmware based on the original Pioneer EU130 1.06 update.
 Restores Bluetooth song information on a tested AVIC-X850BT while the Android
@@ -23,13 +23,52 @@ component version data are unchanged; this release adds no CarPlay or Android Au
 
 ## Compatibility
 
-Bluetooth metadata, enlarged music text and clean screen rendering have been
-confirmed on an **AVIC-X850BT** with a **Samsung Galaxy S26 Ultra**, **Spotify**
-and phone AVRCP set to **1.6**.
+The following seven models belong to the matching Pioneer 1.06 update family.
+**Tested** means the fix has been confirmed on a real unit. **Expected** means
+the original firmware is shared or identical, but the modified firmware still
+needs confirmation on that model.
 
-Use only with the matching **AVIC-X850BT EU130** update family. Other models,
-regions, phones and apps have not been validated. Package verification results
-are available in [verification.json](docs/verification.json).
+| Model | Region covered by the original update | Status and evidence |
+|---|---|---|
+| **AVIC-X850BT** | United States / Canada | **Tested:** Bluetooth metadata, larger text and clean screen rendering confirmed. |
+| **AVIC-X950BH** | United States / Canada | **Expected:** included with X850BT in Pioneer's shared 1.06 update notice. |
+| **AVIC-Z150BH** | United States / Canada | **Expected:** included with X850BT in Pioneer's shared 1.06 update notice. |
+| **AVIC-F50BT** | Europe / Russia | **Expected:** official 1.06 firmware matches our original package byte-for-byte. |
+| **AVIC-F950BT** | Europe / Russia | **Expected:** official 1.06 firmware matches our original package byte-for-byte. |
+| **AVIC-F950DAB** | Europe / Russia | **Expected:** official 1.06 firmware matches our original package byte-for-byte. |
+| **AVIC-F850BT** | Europe / Russia | **Expected:** official 1.06 firmware matches our original package byte-for-byte. |
+
+The confirmed setup is **AVIC-X850BT + Samsung Galaxy S26 Ultra + Spotify**,
+with the phone's AVRCP setting at **1.6**. Other phones and apps have not been
+validated. The six expected models are candidates for testing, not additional
+hardware-confirmed results; DAB and other model-specific functions have not
+been tested with this modification.
+
+### Firmware evidence
+
+- Pioneer's January 2014 [North American 1.06 notice](https://www.manualslib.com/manual/996725/Pioneer-Avic-Z150bh.html)
+  lists X850BT, X950BH and Z150BH together. The link is an archived copy of
+  Pioneer's original notice.
+- Pioneer's [European/Russian 1.06 instructions](https://pioneer-car.eu/uk/asset/software_and_firmware/FIRMWARE_ID_19149/be20c8ecb38e49dbc188314ce5babca164c48c94/update_instructions)
+  list F50BT, F950BT, F950DAB and F850BT together, using the `AVICX850` update
+  folder. The folder name therefore does not limit the package to the X850BT.
+- All **78 files** in the official European download variants linked from
+  [F50BT](https://pioneer-car.eu/avic-f50bt/avic-f50bt),
+  [F950BT](https://pioneer-car.eu/avic-f950bt/avic-f950bt),
+  [F950DAB](https://pioneer-car.eu/avic-f950dab/avic-f950dab) and
+  [F850BT](https://pioneer-car.eu/avic-f850bt/avic-f850bt) were compared with
+  the untouched 1.06 package used to build this release: **zero differences**.
+
+The matching original `PLATFORM/EU130PLT.PRG` SHA-256 is:
+
+```text
+49c559947b8a7384bea23223ef0a702b17b48c7b3faee34e1be8a48e5cec8571
+```
+
+Research checked **October 25, 2026**. Compatibility has not been established
+for other AVIC, AVH or NEX models, or market variants outside the regions above.
+A similar model name or a firmware version of 1.06 alone is not sufficient.
+Package verification results are in [verification.json](docs/verification.json).
 
 ## Installation
 
@@ -39,7 +78,7 @@ are available in [verification.json](docs/verification.json).
    matching original 1.06. The updater requires a strictly higher number.
    It cannot install over version 1.07 or higher.
 3. Copy this repository's **AVICX850** folder to the root of a blank FAT32
-   microSD update card. The card must contain `AVICX850/APL` and
+   SD or microSD card, as required by your model. The card must contain `AVICX850/APL` and
    `AVICX850/PLATFORM`. Avoid an extra nested repository folder on the card.
 4. Follow the normal update procedure for this model with stable power, and
    allow the update and restart to finish. Do not interrupt power or remove
